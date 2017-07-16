@@ -24,7 +24,7 @@ def rounds board, n
 
     display_b board
 
-    sleep 0.3
+    sleep 0.1
   end
 end
 
@@ -60,7 +60,7 @@ def newgame num
 end
 
 def newgame_blank num, specials = []
-  cells = make_b 25, 25, DEAD, specials
+  cells = make_b 55, 55, DEAD, specials
 
   rounds cells, num
 end

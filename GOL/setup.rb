@@ -28,7 +28,6 @@ end
 # if there is no macro just add that array to the main array
 # otherwise make a new array containing all the arrays that result from
 # that macro and add all of these to array
-# NOTE: we need to make sure nothing goes off the edge
 def to_array str
   array = []
   str.split().each do |i|
@@ -53,6 +52,6 @@ end
 
 
 
-alive = to_array("13,12,r_pen 10,10,r_pen")
+alive = to_array("27,27,r_pen")
 
-p newgame_for_science alive
+p newgame_blank 200, alive
