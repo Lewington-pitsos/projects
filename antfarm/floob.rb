@@ -33,8 +33,6 @@ class Floob
 
     @dna = dna
     @breeder = Breeder.new
-
-    directions
   end
 
   def new_position array
@@ -43,7 +41,12 @@ class Floob
   end
 
   def try
-    [@up, @down, @east, @west].sample
+    [
+      [x_axis + 1, y_axis],
+      [x_axis - 1, y_axis],
+      [x_axis, y_axis + 1],
+      [x_axis, y_axis - 1]
+    ].sample
   end
 
   def try_breed
@@ -58,14 +61,6 @@ class Floob
 
   private
 
-  attr_reader :up, :down, :east, :west
-
   attr_writer :x_axis, :y_axis
 
-  def directions
-    @up = [x_axis + 1, y_axis]
-    @down = [x_axis - 1, y_axis]
-    @east = [x_axis, y_axis + 1]
-    @west = [x_axis, y_axis - 1]
-  end
 end

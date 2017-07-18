@@ -162,12 +162,11 @@ class Farm
     area
   end
 end
-w = Farm.new(20, 20, 10, 0)
+w = Farm.new(20, 20, 1, 0)
 
 
-w.move_floobs
 
-=begin
+
 8.times do
   20.times do
     w.move_floobs
@@ -188,4 +187,3 @@ w.move_floobs
   w.show_board
 
 end
-=end
