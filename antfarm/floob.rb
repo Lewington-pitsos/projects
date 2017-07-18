@@ -1,13 +1,16 @@
 class Breeder
-  ERROR_RATE = 20
-  DNA_RANGE = {
-    colour: %w(RED BLUE GREEN)
-  }.freeze
+  ERROR_RATE = 70
+
+  def initialize
+    @dna_range = {
+      colour: %w(RED BLUE GREEN)
+    }.freeze
+  end
 
   def dna_from floob_dna
     floob_dna.keys.each_with_object({}) do |property, new_dna|
       if rand(0..101) < ERROR_RATE
-        new_dna[property] = DNA_RANGE[property].sample
+        new_dna[property] = @dna_range[property].sample
       else
         new_dna[property] = floob_dna[property]
       end
@@ -18,7 +21,6 @@ end
 #---------------------------------------------------------------------------#
 
 class Floob
-  @@breeder = Breeder.new
 
   attr_reader :colour, :symbol, :x_axis, :y_axis, :dna
 
@@ -30,6 +32,7 @@ class Floob
     @symbol = colour[0]
 
     @dna = dna
+    @breeder = Breeder.new
 
     directions
   end
@@ -49,7 +52,7 @@ class Floob
 
   def breed positions
     positions.map do |pos|
-      Floob.new(pos[0], pos[1], @@breeder.dna_from(dna))
+      Floob.new(pos[0], pos[1], @breeder.dna_from(dna))
     end
   end
 

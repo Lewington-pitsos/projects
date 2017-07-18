@@ -1,12 +1,17 @@
 require_relative "floob.rb"
+
 class CarniBreeder < Breeder
-  DNA_RANGE = %w(PURPLE ORANGE LYLAC)
+  def initialize
+    @dna_range= {
+      colour: %w(ORANGE, PURPLE, TEAL)
+    }.freeze
+  end
 end
 
 
 class CarniFloob < Floob
 
-  @@breeder = CarniBreeder.new
+
 
   attr_reader :kills, :range
 
@@ -14,10 +19,19 @@ class CarniFloob < Floob
     super
     @kills = 0
     @range = 2
+    @breeder = CarniBreeder.new
   end
 
   def try_breed
-    kills > 1 ? [x_axis, y_axis] : nil
+    if kills > 1
+      [[x_axis, y_axis]]
+    else
+      nil
+    end
+  end
+
+  def breed position
+    [CarniFloob.new(position[0][0], position[0][1], @breeder.dna_from(dna))]
   end
 
   def eat

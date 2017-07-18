@@ -39,6 +39,7 @@ class Farm
       count = 0
       while count < 10
         attempt = floob.try
+        p attempt
         if !occupied.include?(attempt) && within_bounds(attempt)
           make_moves floob, position, attempt
           break
@@ -77,6 +78,7 @@ class Farm
         attempt = floob.try_breed
         unless attempt
           temp.delete(floob)
+          occupied.delete([floob.x_axis, floob.y_axis])
           break
         end
         if (occupied & attempt).size == 1 &&
@@ -160,19 +162,25 @@ class Farm
     area
   end
 end
-w = Farm.new(20, 20, 100, 1)
+w = Farm.new(20, 20, 10, 0)
 
-w.floobs_eat
 
+w.move_floobs
+
+=begin
 8.times do
   20.times do
     w.move_floobs
 
     w.show_board
 
+    sleep 0.3
+
     w.floobs_eat
 
     w.show_board
+
+    sleep 0.3
   end
 
   w.new_generation
@@ -180,3 +188,4 @@ w.floobs_eat
   w.show_board
 
 end
+=end
