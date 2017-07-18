@@ -41,16 +41,11 @@ class Floob
   end
 
   def try
-    [
-      [x_axis + 1, y_axis],
-      [x_axis - 1, y_axis],
-      [x_axis, y_axis + 1],
-      [x_axis, y_axis - 1]
-    ].sample
+    direction
   end
 
   def try_breed
-    [[x_axis, y_axis], [@up, @down, @east, @west].sample]
+    [[x_axis, y_axis], direction]
   end
 
   def breed positions
@@ -60,6 +55,15 @@ class Floob
   end
 
   private
+
+  def direction
+    [
+      [x_axis + 1, y_axis],
+      [x_axis - 1, y_axis],
+      [x_axis, y_axis + 1],
+      [x_axis, y_axis - 1]
+    ].sample
+  end
 
   attr_writer :x_axis, :y_axis
 

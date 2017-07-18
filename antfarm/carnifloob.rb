@@ -17,7 +17,7 @@ class CarniFloob < Floob
 
   def initialize(x, y, dna)
     super
-    @kills = 0
+    @kills = 3
     @range = 2
     @breeder = CarniBreeder.new
   end
@@ -37,9 +37,6 @@ class CarniFloob < Floob
   def eat
     @kills += 1
   end
-
-
-
 
 end
 =begin

@@ -5,10 +5,13 @@ class Farm
   attr_reader :floobs, :preditors, :free
 
   def initialize x, y, floob_num, pred_num
+
+    space_guard x, y, (floob_num + pred_num)
+
     @x = x
     @y = y
 
-    @free = (0..x).to_a.product((0..y).to_a)
+    @free = (1..x).to_a.product((1..y).to_a)
     @occupied = []
     @floobs = []
     @preditors = []
@@ -18,8 +21,6 @@ class Farm
 
     @board = Board.new(x + 1, y + 1)
   end
-
-
 
   def show_board
 
@@ -39,7 +40,6 @@ class Farm
       count = 0
       while count < 10
         attempt = floob.try
-        p attempt
         if !occupied.include?(attempt) && within_bounds(attempt)
           make_moves floob, position, attempt
           break
@@ -78,13 +78,18 @@ class Farm
         attempt = floob.try_breed
         unless attempt
           temp.delete(floob)
-          occupied.delete([floob.x_axis, floob.y_axis])
+          occupied.delete(position)
           break
         end
+        begin
         if (occupied & attempt).size == 1 &&
            attempt.all? { |i| within_bounds(i) }
           breed_offspring floob, position, attempt, temp
           break
+        end
+        rescue
+          print [attempt, position]
+          exit
         end
         count += 1
       end
@@ -98,6 +103,13 @@ class Farm
 
   attr_reader :board, :occupied, :x, :y
   attr_writer :floobs, :preditors
+
+  def space_guard x, y, population
+    if x * y < population
+      puts "too many floobs"
+      exit
+    end
+  end
 
   def populate num, object_class, list, dna
     num.times do
@@ -142,7 +154,10 @@ class Farm
 
     new_floobs = floob.breed(attempt)
 
-    new_floobs.each { |i| temp << i }
+    new_floobs.each do |i|
+      temp << i
+      preditors << i if i.class == CarniFloob
+    end
 
     attempt.each { |i| occupied << i }
   end
@@ -162,28 +177,30 @@ class Farm
     area
   end
 end
-w = Farm.new(20, 20, 1, 0)
-
+w = Farm.new(10, 10, 99, 1)
 
 
 
 8.times do
-  20.times do
+  7.times do
     w.move_floobs
 
     w.show_board
 
-    sleep 0.3
+    sleep 1
 
     w.floobs_eat
 
     w.show_board
 
-    sleep 0.3
+    sleep 1
+
   end
 
   w.new_generation
 
   w.show_board
+
+  sleep 1
 
 end
