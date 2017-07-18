@@ -1,0 +1,17 @@
+we need an ant object which
+  (1) has some kind of DNA, which was used to determine its properties on
+      instantiation
+  (2) can make more ants, and does so based on its DNA
+
+Also a farm object which keeps track of all the ants and
+  (1) displays all ants
+  (2) makes rounds go by
+  (3) keeps track of the positions of all the ants
+
+
+Also a preditor object which
+  (1) moves around the same space as the ants
+  (1) might eat any ant near it
+
+Lastly an Antgod object which
+  (1) keeps track of all the ants, and
