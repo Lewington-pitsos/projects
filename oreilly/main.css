@@ -1,0 +1,441 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+ display: block;
+}
+
+body {
+ line-height: 1;
+}
+
+ol, ul {
+ list-style: none;
+}
+
+blockquote, q {
+ quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+ content: '';
+ content: none;
+}
+
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+
+a {
+ color: inherit;
+ text-decoration: none;
+}
+
+/* ----------------------------------------------------------------------- */
+
+.clearfix {
+  clear: both;
+}
+html {
+  font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+}
+
+header {
+  background-image: url("images/magnifying-glass.png");
+  background-repeat: repeat-x;
+  margin-bottom: 65px;
+}
+
+body > main {
+  border-left: 1px solid rgb(221, 221, 221);
+  border-right: 1px solid rgb(221, 221, 221);
+  margin: auto;
+  max-width: 990px;
+}
+
+.top-banner {
+  background: #b9002d;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;;
+  height: 24px;
+  padding-left: 27px;
+  text-transform: uppercase;
+}
+
+.top-banner a {
+  line-height: 25px;
+}
+
+.title-banner {
+  margin: 19px 0 11px 24px;
+}
+
+.title-text {
+  width: 433px;
+  float: left;
+}
+
+.title-text img {
+  margin-top: -1px;
+}
+
+.extras {
+  float: right;
+  margin-right: 11px;
+}
+
+.extras li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.extras ul {
+  float: right;
+  margin-bottom: 7px;
+}
+
+.extras ul img {
+  height: 23px;
+  width: 23px;
+}
+
+.extras form {
+  margin-right: 4px;
+}
+
+.extras input {
+  box-sizing: border-box;
+  border: 1px solid rgb(221, 221, 221);
+  border-right: none;
+  color: rgb(221, 221, 221);
+  font-size: 12px;
+  padding: 6px 0 4px 2px;
+  width: 219px;
+}
+
+.extras button {
+  background: none;
+  border: none;
+  float: right;
+  height: 25px;
+  padding: 0;
+}
+
+.extras button img {
+  height: 26px;
+  padding: 0;
+  width: 26px;
+}
+
+.meta-nav {
+  clear: both;
+  margin-bottom: 23px;
+}
+
+.meta-nav ul{
+  background: linear-gradient(white, rgb(239, 239, 239));
+  border: 1px solid rgb(221, 221, 221);
+  border-left: none;
+  border-right: none;
+  font-size: 13px;
+  height: 33px;
+}
+
+.meta-nav li, .radar li {
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.meta-nav li{
+  border-right: 1px solid rgb(221, 221, 221);
+  height: 100%;
+  line-height: 34px;
+  padding: 0 15px;
+}
+
+
+.meta-nav .selected{
+  background: white;
+  border-bottom: 1px solid white;
+  color: #900;
+}
+.radar ul {
+  margin-left: 20px;
+}
+.radar li {
+  border-bottom: 4px solid grey;
+  color: grey;
+  font-size: 18px;
+  font-weight: 300;
+  margin-right: 10px;
+  padding: 8px 10px 5px 10px;
+}
+
+.radar li:hover {
+  border-color: #b9002d;
+  color: #b9002d;
+}
+
+/* ------------------- articles ---------------------------------------- */
+
+section {
+  position: relative;
+}
+
+section .updates{
+  height: 412px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 34%;
+}
+
+section .articles-wrapper {
+  margin-left: 20px;
+  margin-right: 34%;
+  padding-right: 19px;
+  padding-top: 4px;
+  width: auto;
+}
+
+section .section-top, .updates .title {
+  border-bottom: 1px solid rgb(221, 221, 221);
+  color: #900;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+section .section-top {
+  font-size: 14px;
+  margin-bottom: 17px;
+  padding-bottom: 2px;
+}
+
+section .updates .title {
+  font-size: 13px;
+  margin-bottom: 10px;
+  padding: 2px 0 5px 0;
+}
+
+section .updates .title ~ .title {
+  margin-right: 18px;
+}
+
+.updates ul {
+  margin-top: 11px;
+}
+
+.updates p {
+  font-size: 13px;
+}
+
+.updates li {
+  height: 34px;
+}
+
+.updates li img {
+  margin-right: 9px;
+  width: 21px;
+}
+
+.updates li p {
+  display: inline-block;
+  vertical-align: 5px;
+}
+
+.updates li a {
+  font-weight: bold;
+}
+
+.updates .google {
+  height: 23px;
+  width: 23px;
+}
+
+.updates .google + p {
+  margin-left: 1px;
+  vertical-align: 9px;
+}
+
+.updates select {
+  border: 1px solid rgb(221, 221, 221);
+  display: block;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.updates .topic {
+  width: 158px;
+}
+
+.updates .author {
+  margin-bottom: 21px;
+  width: 200px;
+}
+
+.updates .title + p {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+}
+
+.featured {
+  border-bottom: 5px solid rgb(221, 221, 221);
+  margin-bottom: 29px;
+}
+
+article {
+  margin: 0 20px 23px 0;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+h3 {
+  color: blue;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+section article p {
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 14px;
+}
+
+
+section a {
+  color: blue;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 17px;
+  padding-top: 3px;
+}
+
+ul.blocky {
+  list-style-type: square;
+  margin-left: 22px;
+  padding-top: 2px;
+}
+
+.blocky li {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+article .social-media {
+  margin: 33px 0 0 0;
+  padding-bottom: 12px;
+}
+
+article .social-media li {
+  display: inline-block;
+}
+
+article .social-media .icon-holder {
+  background: url("images/twitter-logo.jpg");
+  background-size: contain;
+  height: 22px;
+  margin-right: 1px;
+  width: 23px;
+}
+
+article .social-media .icon-holder:hover {
+  background: url("/images/mag-glass.jpg");
+}
+
+article header {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+article .side-image {
+  float: right;
+  height: auto;
+  margin: 4px 1px 0 22px;
+  width: 350px;
+}
+
+article .full-width {
+  overflow: hidden;
+  margin-left: 0;
+  float: none;
+  height: 248px;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.waterfall {
+  height: 100%;
+  width: 100%;
+  background: url("images/waterfall.png");
+  background-position: 15% 85%;
+  transform: scale(2.2);
+}
+
+article header img {
+  float: left;
+  height: 80px;
+  width: 57px;
+}
+
+article header h3, article header p {
+  margin-left: 67px;
+}
+
+article header h3 {
+  margin-bottom: 5px;
+}
+
+article header p {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 17px;
+  margin-bottom: 4px;
+}
+
+article header .authorship {
+  color: grey;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+article .editors-note {
+  font-style: italic;
+}
+
+article .expander {
+  float: left;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: -12px;
+}
+
+ul.article {
+  line-height: 20px;
+  font-size: 15px;
+  list-style-type: square;
+  margin: 14px 0 24px 42px;
+}
+
+.article li {
+  margin-bottom: 10px;
+}
