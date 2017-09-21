@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <link rel="stylesheet" href="/style/main.css">
+   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+   <link rel="icon" type="image/gif" href="/images/logo.png">
+   <meta charset="UTF-8">
+   <title>TITLE</title>
+   <meta name="description" content="DESCRIPTION">
+   <script type="text/javascript" src="/public/scripts/main.js">
+   </script>
+</head>
+
+<body>
+  <header>
+    <div class="title">
+      <h1>Altitude Chess</h1>
+      <p>Reach Higher</p>
+    </div>
+    <figure>
+      <img src="resources/development/pawn_black_120x69.png" alt="black pawn logo">
+    </figure>
+    <nav>
+      <ul>
+        <li><a href="/home" class="active">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/program">School Programs</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
+    <div class="details">
+      <h4>Details</h4>
+      <dl>
+        <div class="detail">
+          <dt>Address:</dt>
+          <dd>
+            3 Colston Avenue, Sherbrooke
+          </dd>
+        </div>
+        <div class="detail">
+          <dt>Email:</dt>
+          <dd>
+            altitudechess@gmail.com
+          </dd>
+        </div>
+        <div class="detail">
+          <dt>Phone:</dt>
+          <dd>
+            0491 158 824
+          </dd>
+        </div>
+      </dl>
+      <div class="small-line"></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/home" class="active">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/program">School Programs</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="clearfix"></div>
+  </footer>
+
+</body>

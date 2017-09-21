@@ -1,0 +1,264 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* -------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Arkhip";
+  src: url("../../resources/fonts/Arkhip_font.ttf");
+}
+
+h1, h2, h3, h4, h6 {
+  font-family: "Arkhip", verdana, sans-serif;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+  color: #191616;
+}
+
+header {
+  margin-top: -155px;
+  box-sizing: border-box;
+  background: white;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 30px 90px 10px 145px;
+  z-index: 999;
+}
+
+h1 {
+  font-size: 60px;
+  margin-bottom: 16px;
+}
+
+.title p {
+  color: grey;
+  font-weight: lighter;
+  font-size: 12px;
+  margin-left: 80px;
+  letter-spacing: 3px;
+  padding-bottom: 10px;
+}
+
+header li {
+  display: inline-block;
+  margin-right: 25px;
+  font-size: 15px;
+  color: grey;
+}
+
+.active {
+  color: #57BBBF;
+}
+
+/* ----------------------- Main ------------------ */
+
+.first-banner {
+  margin-top: 155px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 700px;
+  width: 100%;
+}
+
+.hotel {
+  background: url("/../resources/development/hotel.jpg");
+}
+
+.first-banner button {
+  font-size: 15px;
+  color: white;
+  border: 3px solid #191616;
+  background: #191616;
+  height: 45px;
+  width: 140px;
+}
+
+.first-banner button:hover {
+  background: none;
+}
+
+h3 {
+  text-align: center;
+  font-size: 38px;
+  padding: 50px 50px 0 50px;
+  max-width: 500px;
+}
+
+.background {
+  display: flex;
+  background: url("/../resources/development/chess.jpg");
+  background-position: -400px -100px;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  flex-grow: 1;
+  flex-shrink: 0px;
+  height: 1000px;
+}
+
+.white {
+  background: linear-gradient(270deg, white, rgba(255, 255, 255, 0.6));
+}
+
+article {
+  background-color: white;
+  flex-grow: 3;
+  max-width: 800px;
+  padding-left: 50px;
+  padding-top: 100px;
+}
+
+article img {
+  float: right;
+  margin-right: 40px;
+  width: 320px;
+}
+
+.text {
+  margin-right: 430px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: lighter;
+  margin-bottom: 40px;
+}
+
+article p, article ul {
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 36px;
+  margin-bottom: 30px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.small-line {
+  background: black;
+  height: 2px;
+  width: 40px;
+  margin: 30px 0;
+}
+
+/* -------------------- Footer -------------------- */
+
+footer {
+  background: #191616;
+  color: #fbe9e9;
+  padding: 30px 60px 60px 60px;
+}
+
+h4 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+footer nav {
+  text-align: right;
+  float: right;
+}
+
+footer .details {
+  float: left;
+}
+
+footer dt {
+  display: inline-block;
+  font-weight: bolder;
+  width: 100px
+}
+
+footer dd {
+  display: inline-block;
+}
+
+
+.detail {
+  margin-bottom: 12px;
+}
+
+footer li {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+footer .small-line {
+  background: #fbe9e9;
+}
+
+/* --------------------------- Programs ------------------ */
+
+h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.program-text {
+  margin-right: 70px;
+}
+
+article ul {
+  list-style-type: circle;
+  margin-left: 35px;
+}
+
+article li {
+  color: Grey;
+}
