@@ -2,16 +2,13 @@ require "sinatra"
 require "sinatra/reloader"
 require "tilt/erubis"
 
+also_reload '/public/scripts/main.js'
 configure do
   enable :sessions
   set :session_secret, "secret"
   use Rack::Session::Cookie, key: 'rack.session',
                              path: '/',
                              secret: 'secret'
-end
-
-before '*.js' do
-  content_type 'application/javascript'
 end
 
 # ----------------------------------------------------------------------- #
@@ -32,4 +29,12 @@ end
 
 get '/program' do
   erb :program
+end
+
+
+# ----------------------------- EMACScript ---------------- #
+
+get '/main.js' do
+  content_type 'application/javascript'
+  File.read('public/scripts/main.js');
 end

@@ -1,6 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('happy days');
-  return  "sadsdasd";
+  var route = window.location.href.split('/')
+  var currentPageNavigators = document.querySelectorAll(`a[href="/${route[route.length - 1]}"]`)
+  setToActive(currentPageNavigators);
 })
 
-console.log("sdasd");
+function setToActive(navs) {
+  var currents = document.querySelectorAll('.active');
+  currents.forEach(function(current) {
+    current.classList.remove('active');
+  })
+  navs.forEach(function(nav) {
+    nav.classList.add('active');
+  })
+}
+
+function expand() {
+
+}
