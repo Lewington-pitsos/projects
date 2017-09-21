@@ -61,25 +61,23 @@ header {
   margin-bottom: 65px;
 }
 
-body > main {
+body > footer, body > main {
   border-left: 1px solid rgb(221, 221, 221);
   border-right: 1px solid rgb(221, 221, 221);
   margin: auto;
   max-width: 990px;
 }
 
+body > main {
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
 .top-banner {
   background: #b9002d;
   color: white;
-  font-size: 13px;
-  font-weight: 600;;
-  height: 24px;
-  padding-left: 27px;
-  text-transform: uppercase;
-}
-
-.top-banner a {
-  line-height: 25px;
+  height: 23px;
+  padding-top: 1px;
+  padding-left: 18px;
 }
 
 .title-banner {
@@ -300,6 +298,10 @@ section .updates .title ~ .title {
   margin-bottom: 29px;
 }
 
+.featured .social-media {
+  margin-top: 16px;
+}
+
 article {
   margin: 0 20px 23px 0;
   border-bottom: 1px solid rgb(221, 221, 221);
@@ -334,6 +336,7 @@ ul.blocky {
   list-style-type: square;
   margin-left: 22px;
   padding-top: 2px;
+  padding-bottom: 12px;
 }
 
 .blocky li {
@@ -342,7 +345,7 @@ ul.blocky {
 }
 
 article .social-media {
-  margin: 33px 0 0 0;
+  margin-top: -1px;
   padding-bottom: 12px;
 }
 
@@ -364,7 +367,7 @@ article .social-media .icon-holder:hover {
 
 article header {
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 article .side-image {
@@ -376,25 +379,40 @@ article .side-image {
 
 article .full-width {
   overflow: hidden;
-  margin-left: 0;
+  margin: 10px 0 14px 0;
   float: none;
-  height: 248px;
   width: 100%;
-  margin-bottom: 14px;
 }
 
 .waterfall {
-  height: 100%;
+  height: 248px;
   width: 100%;
   background: url("images/waterfall.png");
   background-position: 15% 85%;
   transform: scale(2.2);
 }
 
+.elastisearch {
+  background: url("images/waterfall.png");
+  height: 212px;
+}
+
+figcaption {
+  font-size: 15px;
+  font-style: italic;
+  line-height: 20px;
+  margin: 15px 0 6px 0;
+  text-align: center;
+}
+
 article header img {
   float: left;
   height: 80px;
   width: 57px;
+}
+
+.smaller {
+  height: 64px;
 }
 
 article header h3, article header p {
@@ -423,10 +441,8 @@ article .editors-note {
 }
 
 article .expander {
-  float: left;
   font-size: 15px;
   font-weight: bold;
-  margin-top: -12px;
 }
 
 ul.article {
@@ -436,6 +452,94 @@ ul.article {
   margin: 14px 0 24px 42px;
 }
 
-.article li {
+ul.article li {
   margin-bottom: 10px;
+}
+
+.item-title {
+  font-weight: bold;
+}
+
+ol.article {
+  list-style-type: decimal;
+  margin: 0 0 10px 20px;
+}
+
+ol.article li p {
+  margin-bottom: 10px;
+}
+
+.older-posts {
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 25px 0 25px 20px;
+}
+
+/* --------------------- Footer --------------- */
+
+footer {
+  padding-top: 12px;
+}
+
+.bottom-banner {
+  background: #b9002d;
+  color: white;
+  margin-bottom: 17px;
+}
+
+.bottom-banner nav {
+  float: right;
+  margin: 13px 25px 15px 0;
+}
+
+.bottom-banner a {
+  display: inline-block;
+  font-size: 11px;
+  vertical-align: middle;
+}
+
+.bottom-banner ul {
+  display: inline-block;
+}
+
+.bottom-banner li {
+  display: inline-block;
+}
+
+footer img {
+  width: 19.5px;
+}
+
+footer a, footer p, footer h6 {
+  font-size: 12px;
+}
+h6 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.footer-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 14px 0 12px;
+}
+
+.trademark {
+  box-sizing: border-box;
+  padding-right: 50px;
+  width: 284px;
+}
+
+.trademark p {
+  line-height: 15px;
+  margin-top: 12px;
+}
+
+.list-wrapper ul {
+  margin: 8px 0 9px 0;
+}
+
+.list-wrapper li {
+  margin-bottom: 3px;
 }
