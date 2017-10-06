@@ -77,12 +77,12 @@ a:hover {
 }
 
 .top-menu {
-  height: 41px;
+  height: 40px;
   background-color: #555;
   color: white;
   display: flex;
   align-items: center;
-  padding-left: 9px;
+  padding-left: 10px;
   display: none;
 }
 
@@ -642,6 +642,9 @@ h6 {
     min-width: 390px;
   }
 
+  main > header {
+  }
+
   .top-menu {
     display: flex;
   }
@@ -665,12 +668,12 @@ h6 {
   }
 
   .title-banner {
-    margin-left: 22px;
-    padding-right: 25px;
+    margin-left: 2.6%;
+    padding-right: 27px;
   }
 
   section {
-    margin: 0 9px 0 5px;
+    margin: 0 9px 0 0.5%;
   }
 
   .updates {
@@ -683,6 +686,8 @@ h6 {
 
   .topics {
     display: block;
+    margin-left: 3%;
+    margin-right: 27px;
   }
 
   .bottom-banner nav {
